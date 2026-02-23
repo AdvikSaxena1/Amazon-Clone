@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Clone</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #e3e6e6;
+    }
+
+    /* HEADER */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #131921;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      width: 100px;
+      cursor: pointer;
+    }
+
+    /* SEARCH BAR */
+    .nav-search {
+      display: flex;
+      flex: 1;
+      margin: 0 20px;
+      max-width: 700px;
+    }
+
+    .nav-search input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 15px;
+    }
+
+    .nav-search button {
+      background-color: #febd69;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .nav-links div {
+      cursor: pointer;
+    }
+
+    .cart {
+      display: flex;
+      align-items: center;
+    }
+
+    .cart img {
+      width: 35px;
+      margin-right: 5px;
+    }
+
+    /* NAVBAR LINKS BELOW HEADER */
+    .nav-bottom {
+      background-color: #232f3e;
+      display: flex;
+      gap: 20px;
+      padding: 10px 20px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .nav-bottom div:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background-image: url('https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg');
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    /* PRODUCT GRID */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .product p {
+      color: #007185;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #232f3e;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 30px;
+    }
+
+    .footer a {
+      color: #febd69;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="navbar">
+    <div class="nav-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+    </div>
+
+    <div class="nav-search">
+      <input type="text" placeholder="Search Amazon.in">
+      <button>🔍</button>
+    </div>
+
+    <div class="nav-links">
+      <div>Hello, sign in<br><b>Account & Lists</b></div>
+      <div>Returns<br><b>& Orders</b></div>
+      <div class="cart">
+        <img src="https://cdn-icons-png.flaticon.com/512/34/34568.png" alt="Cart">
+        <b>Cart</b>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <div class="nav-bottom">
+    <div>All</div>
+    <div>Mobiles</div>
+    <div>Best Sellers</div>
+    <div>Electronics</div>
+    <div>Customer Service</div>
+    <div>Fashion</div>
+    <div>Home & Kitchen</div>
+    <div>Books</div>
+    <div>Amazon Pay</div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div class="hero-text">You are on amazon.in. You can shop millions of products with fast delivery.</div>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div class="product-grid">
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71kxa1-0mfL._AC_UL480_FMwebp_QL65_.jpg" alt="Product 1">
+      <h3>Wireless Headphones</h3>
+      <p>₹1,499</p>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/81fPKd-2AYL._AC_UL480_FMwebp_QL65_.jpg" alt="Product 2">
+      <h3>Smart Watch</h3>
+      <p>₹2,999</p>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UL480_FMwebp_QL65_.jpg" alt="Product 3">
+      <h3>Gaming Mouse</h3>
+      <p>₹899</p>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/81Zt42ioCgL._AC_UL480_FMwebp_QL65_.jpg" alt="Product 4">
+      <h3>Bluetooth Speaker</h3>
+      <p>₹1,199</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Back to top</p>
+    <p>© 2025, Amazon Clone by Advik Saxena | For educational purposes only</p>
+    <p><a href="#">Conditions of Use</a> | <a href="#">Privacy Notice</a></p>
+  </div>
+
+</body>
+</html>
